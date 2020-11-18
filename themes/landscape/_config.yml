@@ -29,10 +29,10 @@ archive_type: 'yearly'
 show_count: false
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-167617845-1
 gauges_analytics:
 favicon: /favicon.png
-twitter: 'KY__2001'
+twitter: '@KY__2001'
 google_plus:
 fb_admins:
 fb_app_id:
