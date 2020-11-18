@@ -3,6 +3,7 @@ menu:
   Home: /
   Archives: /archives
 rss: /atom.xml
+banner: images/banner.jpg
 
 # Content
 excerpt_link: Read More
@@ -24,14 +25,14 @@ index_widgets:
 # - archive
 
 # widget behavior
-archive_type: 'monthly'
+archive_type: 'yearly'
 show_count: false
 
 # Miscellaneous
 google_analytics:
 gauges_analytics:
 favicon: /favicon.png
-twitter:
+twitter: 'KY__2001'
 google_plus:
 fb_admins:
 fb_app_id:
