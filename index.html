@@ -40,7 +40,11 @@ ga('send', 'pageview');
   
 <link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.2.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
   <div id="container">
@@ -143,7 +147,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/19/AtCoder-BLUE/" data-id="ckhqy6d380003wotw47jd400i" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/19/AtCoder-BLUE/" data-id="ckhqy81100001fwtwbr740hog" class="article-share-link">共有</a>
       
       
     </footer>
@@ -179,8 +183,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="環境構築"><a href="#環境構築" class="headerlink" title="環境構築"></a>環境構築</h2><p><a target="_blank" rel="noopener" href="https://www.anaconda.com/">ANACONDA</a>をダウンロードします.<br>PythonやRとそのパッケージ(ライブラリ)を管理できます.</p>
-<h2 id="使ってみる"><a href="#使ってみる" class="headerlink" title="使ってみる"></a>使ってみる</h2><p>起動するとブラウザが開き, 次のような画面が表示されます/</p>
+        <h2 id="環境構築"><a href="#環境構築" class="headerlink" title="環境構築"></a>環境構築</h2><p><a target="_blank" rel="noopener" href="https://www.anaconda.com/">ANACONDA</a>をダウンロードします.<br>PythonやRとそのパッケージ(ライブラリ)を管理できます.<br>起動するとブラウザが開き, 次のような画面が表示されます/</p>
 <img src="/2020/11/18/jupyter-notebook/1.jpg" class="">
 <p>設定ファイル等作成されるので, 専用のフォルダに移動してから, 右上のNew/Python3をクリックしてファイルを新規作成しましょう.</p>
 <img src="/2020/11/18/jupyter-notebook/2.jpg" class="">
@@ -197,7 +200,7 @@ ga('send', 'pageview');
 <p>出力:</p>
 <img src="/2020/11/18/jupyter-notebook/5.jpg" class="">
 <p>以上で取り敢えずグラフがかけます.</p>
-<h2 id="細かい所-自分が詰まったところ"><a href="#細かい所-自分が詰まったところ" class="headerlink" title="細かい所(自分が詰まったところ)"></a>細かい所(自分が詰まったところ)</h2><h4 id="1-np-arange-をnp-arrange-と書いてしまう"><a href="#1-np-arange-をnp-arrange-と書いてしまう" class="headerlink" title="1. np.arange()をnp.arrange()と書いてしまう"></a>1. np.arange()をnp.arrange()と書いてしまう</h4><h4 id="2-np-linspace-をnp-linespace-と書いてしまう"><a href="#2-np-linspace-をnp-linespace-と書いてしまう" class="headerlink" title="2. np.linspace()をnp.linespace()と書いてしまう"></a>2. np.linspace()をnp.linespace()と書いてしまう</h4><h4 id="3-np-arange-とnp-linspace-range-の違い"><a href="#3-np-arange-とnp-linspace-range-の違い" class="headerlink" title="3. np.arange()とnp.linspace(), range()の違い"></a>3. np.arange()とnp.linspace(), range()の違い</h4><ol>
+<h2 id="細かい所"><a href="#細かい所" class="headerlink" title="細かい所"></a>細かい所</h2><h4 id="1-np-arange-をnp-arrange-と書いてしまう"><a href="#1-np-arange-をnp-arrange-と書いてしまう" class="headerlink" title="1. np.arange()をnp.arrange()と書いてしまう"></a>1. np.arange()をnp.arrange()と書いてしまう</h4><h4 id="2-np-linspace-をnp-linespace-と書いてしまう"><a href="#2-np-linspace-をnp-linespace-と書いてしまう" class="headerlink" title="2. np.linspace()をnp.linespace()と書いてしまう"></a>2. np.linspace()をnp.linespace()と書いてしまう</h4><h4 id="3-np-arange-とnp-linspace-range-の違い"><a href="#3-np-arange-とnp-linspace-range-の違い" class="headerlink" title="3. np.arange()とnp.linspace(), range()の違い"></a>3. np.arange()とnp.linspace(), range()の違い</h4><ol>
 <li>np.linspace()<br>   閉区間[L, R]についてnp.linspace(L, R, 点の数)と指定します。<br>   例えば, np.linspace(0, 1, 3) = [0, 0.5, 1], np.linspace(0, 1, 5) = [0, 0.25, 0.5, 0.75, 1]となります.<br>   つまり点同士の間隔は$(R - L)/(点の数 - 1)$となります。<br>   グラフを描くという視点では点の数でグラフの滑らかさと配列のサイズが決まるのでこれが使いやすいように感じます.</li>
 <li>np.arange()<br>   半開区間[L, R)についてnp.arange(L, R, 点同士の間隔)と指定します.<br>   例えばnp.arange(0, 5, 1) = [0, 1, 2, 3, 4], np.arange(0, 1, 0.5) = [0, 0.5]となります.<br>   半開区間なのでRを含まないというのがポイントです.</li>
 <li>range()<br>   半開区間についてrange(L, R, 点同士の間隔)と指定します.<br>   一見, np.arange()と同じに見えますが, <strong>点同士の間隔にfloatを指定できない</strong>点や,<br>   <strong>配列ではなく<a target="_blank" rel="noopener" href="https://qiita.com/tomotaka_ito/items/35f3eb108f587022fa09">ジェネレータ</a>を渡す</strong>点で違いがあります.<br>   取り敢えず, np.arange()を使うほうが良いと思います.</li>
@@ -223,7 +226,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/18/jupyter-notebook/" data-id="ckhqy6d390004wotw1efkhu6d" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/18/jupyter-notebook/" data-id="ckhqy81150006fwtw4sbfd0p6" class="article-share-link">共有</a>
       
       
     </footer>
@@ -342,7 +345,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/25/Approximate-integration/" data-id="ckhqy6d2z0000wotweg5e8xqu" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/25/Approximate-integration/" data-id="ckhqy810v0000fwtwf6kkdvbb" class="article-share-link">共有</a>
       
       
     </footer>
