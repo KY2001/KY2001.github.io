@@ -143,7 +143,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/19/AtCoder-BLUE/" data-id="ckhqy0wws0003qotwazyoe78o" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/19/AtCoder-BLUE/" data-id="ckhqy6d380003wotw47jd400i" class="article-share-link">共有</a>
       
       
     </footer>
@@ -179,57 +179,51 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Jupyter-Notebookとは"><a href="#Jupyter-Notebookとは" class="headerlink" title="Jupyter Notebookとは"></a>Jupyter Notebookとは</h2><p>色んなプログラミング言語でデータを計算したり, グラフや表を表示したりできます。<br>機械学習, データサイエンスに使うようで。<br>メリットとしては以下が挙げられます。</p>
-<ul>
-<li>PythonやR等の便利なライブラリが使用できる。</li>
-<li>対話型(一行ずつ実行できる)なので, 結果を見ながら柔軟に試行錯誤できる。</li>
-<li>簡単に画像や実行画面をjpgやpdfで出力できる。</li>
-</ul>
-<h2 id="環境構築"><a href="#環境構築" class="headerlink" title="環境構築"></a>環境構築</h2><p><a target="_blank" rel="noopener" href="https://www.anaconda.com/">ANACONDA</a>をダウンロードしましょう。<br>PythonやRとそのパッケージ(ライブラリ)を簡単に管理できるソフトです。<br>言語自体も導入できます。ダウンロードが終われば自動的にJupyterNotebookが追加されるはずです。</p>
-<h2 id="使ってみる"><a href="#使ってみる" class="headerlink" title="使ってみる"></a>使ってみる</h2><p>起動するとブラウザが開き, 次のような画面が表示されます。</p>
+        <h2 id="環境構築"><a href="#環境構築" class="headerlink" title="環境構築"></a>環境構築</h2><p><a target="_blank" rel="noopener" href="https://www.anaconda.com/">ANACONDA</a>をダウンロードします.<br>PythonやRとそのパッケージ(ライブラリ)を管理できます.</p>
+<h2 id="使ってみる"><a href="#使ってみる" class="headerlink" title="使ってみる"></a>使ってみる</h2><p>起動するとブラウザが開き, 次のような画面が表示されます/</p>
 <img src="/2020/11/18/jupyter-notebook/1.jpg" class="">
-<p>設定ファイル等作成されるので, 専用のフォルダに移動してから, 右上のNew/Python3をクリックしてファイルを新規作成しましょう。</p>
+<p>設定ファイル等作成されるので, 専用のフォルダに移動してから, 右上のNew/Python3をクリックしてファイルを新規作成しましょう.</p>
 <img src="/2020/11/18/jupyter-notebook/2.jpg" class="">
-<p>すると次のような画面が開きます。ここで作業をしていくことになります。</p>
+<p>すると次のような画面が開きます。ここで作業をしていくことになります.</p>
 <img src="/2020/11/18/jupyter-notebook/tmp2.jpg" class="">
 <br>
 
-<h2 id="グラフを描く"><a href="#グラフを描く" class="headerlink" title="グラフを描く"></a>グラフを描く</h2><p>まずは便利なライブラリをインポートして使えるようにしておきましょう。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy <span class="comment"># 省略可</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd <span class="comment">#省略可</span></span><br><span class="line"><span class="keyword">import</span> math</span><br></pre></td></tr></table></figure>
+<h2 id="グラフを描く"><a href="#グラフを描く" class="headerlink" title="グラフを描く"></a>グラフを描く</h2><p>ライブラリをインポートしておきます.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> math</span><br></pre></td></tr></table></figure>
 <h4 id="二次関数-y-x-2"><a href="#二次関数-y-x-2" class="headerlink" title="二次関数 $y = x^2$"></a>二次関数 $y = x^2$</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">1000</span>)</span><br><span class="line">y = x**<span class="number">2</span></span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
 <p>出力:</p>
 <img src="/2020/11/18/jupyter-notebook/4.jpg" class="">
 <h4 id="正弦波-y-sin-x"><a href="#正弦波-y-sin-x" class="headerlink" title="正弦波 $y = sin(x)$"></a>正弦波 $y = sin(x)$</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
 <p>出力:</p>
 <img src="/2020/11/18/jupyter-notebook/5.jpg" class="">
-<p>以上で取り敢えずグラフがかけます。</p>
+<p>以上で取り敢えずグラフがかけます.</p>
 <h2 id="細かい所-自分が詰まったところ"><a href="#細かい所-自分が詰まったところ" class="headerlink" title="細かい所(自分が詰まったところ)"></a>細かい所(自分が詰まったところ)</h2><h4 id="1-np-arange-をnp-arrange-と書いてしまう"><a href="#1-np-arange-をnp-arrange-と書いてしまう" class="headerlink" title="1. np.arange()をnp.arrange()と書いてしまう"></a>1. np.arange()をnp.arrange()と書いてしまう</h4><h4 id="2-np-linspace-をnp-linespace-と書いてしまう"><a href="#2-np-linspace-をnp-linespace-と書いてしまう" class="headerlink" title="2. np.linspace()をnp.linespace()と書いてしまう"></a>2. np.linspace()をnp.linespace()と書いてしまう</h4><h4 id="3-np-arange-とnp-linspace-range-の違い"><a href="#3-np-arange-とnp-linspace-range-の違い" class="headerlink" title="3. np.arange()とnp.linspace(), range()の違い"></a>3. np.arange()とnp.linspace(), range()の違い</h4><ol>
-<li>np.linspace()<br>   閉区間[L, R]についてnp.linspace(L, R, 点の数)と指定します。<br>   例えば, np.linspace(0, 1, 3) = [0, 0.5, 1], np.linspace(0, 1, 5) = [0, 0.25, 0.5, 0.75, 1]となります。<br>   つまり点同士の間隔は$(R - L)/(点の数 - 1)$となります。<br>   グラフを描くという視点では点の数でグラフの滑らかさと配列のサイズが決まるのでこれが使いやすいように感じます。</li>
-<li>np.arange()<br>   半開区間[L, R)についてnp.arange(L, R, 点同士の間隔)と指定します。<br>   例えばnp.arange(0, 5, 1) = [0, 1, 2, 3, 4], np.arange(0, 1, 0.5) = [0, 0.5]となります。<br>   半開区間なのでRを含まないというのがポイントです。</li>
-<li>range()<br>   半開区間についてrange(L, R, 点同士の間隔)と指定します。<br>   一見, np.arange()と同じに見えますが, <strong>点同士の間隔にfloatを指定できない</strong>点や,<br>   <strong>配列ではなく<a target="_blank" rel="noopener" href="https://qiita.com/tomotaka_ito/items/35f3eb108f587022fa09">ジェネレータ</a>を渡す</strong>点で違いがあります。<br>   取り敢えず, np.arange()を使うほうが良いと思います。</li>
+<li>np.linspace()<br>   閉区間[L, R]についてnp.linspace(L, R, 点の数)と指定します。<br>   例えば, np.linspace(0, 1, 3) = [0, 0.5, 1], np.linspace(0, 1, 5) = [0, 0.25, 0.5, 0.75, 1]となります.<br>   つまり点同士の間隔は$(R - L)/(点の数 - 1)$となります。<br>   グラフを描くという視点では点の数でグラフの滑らかさと配列のサイズが決まるのでこれが使いやすいように感じます.</li>
+<li>np.arange()<br>   半開区間[L, R)についてnp.arange(L, R, 点同士の間隔)と指定します.<br>   例えばnp.arange(0, 5, 1) = [0, 1, 2, 3, 4], np.arange(0, 1, 0.5) = [0, 0.5]となります.<br>   半開区間なのでRを含まないというのがポイントです.</li>
+<li>range()<br>   半開区間についてrange(L, R, 点同士の間隔)と指定します.<br>   一見, np.arange()と同じに見えますが, <strong>点同士の間隔にfloatを指定できない</strong>点や,<br>   <strong>配列ではなく<a target="_blank" rel="noopener" href="https://qiita.com/tomotaka_ito/items/35f3eb108f587022fa09">ジェネレータ</a>を渡す</strong>点で違いがあります.<br>   取り敢えず, np.arange()を使うほうが良いと思います.</li>
 </ol>
-<h4 id="4-titleや変数名を表示する。"><a href="#4-titleや変数名を表示する。" class="headerlink" title="4. titleや変数名を表示する。"></a>4. titleや変数名を表示する。</h4><p>以下のようにできます。</p>
+<h4 id="4-titleや変数名を表示する"><a href="#4-titleや変数名を表示する" class="headerlink" title="4. titleや変数名を表示する."></a>4. titleや変数名を表示する.</h4><p>以下のようにできます.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.title(<span class="string">&quot;sin curve&quot;</span>) <span class="comment">#titleを設定</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;x&#x27;</span>)        <span class="comment">#x軸の変数名</span></span><br><span class="line">plt.ylabel(<span class="string">&quot;y = sin(x)&quot;</span>, rotation=<span class="string">&#x27;0&#x27;</span>, labelpad=<span class="number">20</span>) <span class="comment">#y軸の変数名, rotation=0で横向きに</span></span><br><span class="line">plt.grid(<span class="literal">True</span>) <span class="comment"># 網目状のグリッドを表示</span></span><br><span class="line">plt.rcParams[<span class="string">&quot;font.family&quot;</span>] = <span class="string">&quot;Times New Roman&quot;</span> <span class="comment">#フォントを変更</span></span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
 <img src="/2020/11/18/jupyter-notebook/tmp.jpg" class="">
 
-<h4 id="5-plt-plot"><a href="#5-plt-plot" class="headerlink" title="5. plt.plot"></a>5. plt.plot</h4><p>plt.plot(x, y)で取り敢えずグラフが描けます。<strong>xとyは配列もしくはジェネレータ</strong>代入すると動きます。<br>よく使いそうなその他の引数をまとめてみました。</p>
+<h4 id="5-plt-plot"><a href="#5-plt-plot" class="headerlink" title="5. plt.plot"></a>5. plt.plot</h4><p>plt.plot(x, y)でグラフが描けます.<strong>xとyは配列もしくはジェネレータ</strong>代入すると動きます.<br>よく使いそうなその他の引数をまとめました.</p>
 <ol>
-<li>color(c)=: 線の色<br>英語の先頭のアルファベットを指定しましょう。<strong>黒:’k’</strong>, 青:’b’, 緑:’g’, 赤:’r’, 黄色:’c’(cyan), 紫:’m’, 黄色:’y’, 白:’w’</li>
-<li>alpha=: 透過度<br>グラフの線の透過度を0?1で指定できます。1に近いほど濃くなります。</li>
-<li>label=: 線の名前(label)を表示<br>必ずplt.legend()を同時に入力しましょう。</li>
-<li>linewidth(lw)=: 線の太さ<br>大きい値を入れるほど太くなります。お好みの太さを探しましょう。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.plot(x, y, label=<span class="string">&#x27;abc&#x27;</span>)</span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure>
+<li>color(c)=: 線の色<br>英語の先頭のアルファベットを指定します.<strong>黒:’k’</strong>, 青:’b’, 緑:’g’, 赤:’r’, 黄色:’c’(cyan), 紫:’m’, 黄色:’y’, 白:’w’</li>
+<li>alpha=: 透過度<br>グラフの線の透過度を0?1で指定できます。1に近いほど濃くなります.</li>
+<li>label=: 線の名前(label)を表示<br>必ずplt.legend()を同時に入力します.</li>
+<li>linewidth(lw)=: 線の太さ<br>大きい値を入れるほど太くなります.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.plot(x, y, label=<span class="string">&#x27;abc&#x27;</span>)</span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure>
 <img src="/2020/11/18/jupyter-notebook/6.jpg" class="">
-<h4 id="6-numpy特有の配列に対する操作"><a href="#6-numpy特有の配列に対する操作" class="headerlink" title="6. numpy特有の配列に対する操作"></a>6. numpy特有の配列に対する操作</h4>numpyは配列全体に様々な操作を行えます。例えば, np.array(numpyの配列)では[0, 0, 0] + [1, 1, 1] = [1, 1, 1]: 行列の足し算となりますが, 通常のリストでは [0, 0, 0] + [1, 1, 1] = [0, 0, 0, 1, 1, 1]となります。<br>これが原因で適当にすると思わぬエラーを喰らいます。<br>例えば, 上の正弦波を表示するコードのy = np.sin(x)をmath.sin(x)とするとエラーになります。これはnp.sin(配列)は配列のすべての要素xに対してsin(x)を適応した配列を返すからです。<br>イメージではnp.sin([1, 2, 3]) = [sin(1), sin(2), sin(3)]となります。他にもyのすべての値に誤差を足したい場合, 以下のようにするとうまくいきません。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x) + random.uniform(<span class="number">0</span>, <span class="number">0.1</span>) <span class="comment">#0?0.1のfloat</span></span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
+<h4 id="6-numpy特有の配列に対する操作"><a href="#6-numpy特有の配列に対する操作" class="headerlink" title="6. numpy特有の配列に対する操作"></a>6. numpy特有の配列に対する操作</h4>numpyは配列全体に様々な操作を行えます.例えば, np.array(numpyの配列)では[0, 0, 0] + [1, 1, 1] = [1, 1, 1]: 行列の足し算となりますが, 通常のリストでは [0, 0, 0] + [1, 1, 1] = [0, 0, 0, 1, 1, 1]となります.<br>これが原因で適当にすると思わぬエラーを喰らいます.<br>例えば, 上の正弦波を表示するコードのy = np.sin(x)をmath.sin(x)とするとエラーになります。これはnp.sin(配列)は配列のすべての要素xに対してsin(x)を適応した配列を返すからです.<br>イメージではnp.sin([1, 2, 3]) = [sin(1), sin(2), sin(3)]となります。他にもyのすべての値に誤差を足したい場合, 以下のようにするとうまくいきません.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x) + random.uniform(<span class="number">0</span>, <span class="number">0.1</span>) <span class="comment">#0?0.1のfloat</span></span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
 <img src="/2020/11/18/jupyter-notebook/7.jpg" class="">
-これは以下のようにすると治ります。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">y = [i + random.uniform(<span class="number">0</span>, <span class="number">0.1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> y]</span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
+これは以下のようにすると治りました.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">y = [i + random.uniform(<span class="number">0</span>, <span class="number">0.1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> y]</span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
 <img src="/2020/11/18/jupyter-notebook/8.jpg" class="">
-つまり, 最初の例では配列のすべての値に等しい誤差を足しており, 下の例では配列の一つ一つに異なる誤差を足しています。内包表記を使っていますが, つまりはfor文ですべての要素に += ranodm.uniform(0, 0.1)をするのと同じことです。<h4 id="7-操作にかかる時間を測る"><a href="#7-操作にかかる時間を測る" class="headerlink" title="7. 操作にかかる時間を測る"></a>7. 操作にかかる時間を測る</h4>操作の前に %timeitと打つと操作と同時にかかった時間を表示してくれます。</li>
+つまり, 最初の例では配列のすべての値に等しい誤差を足しており, 下の例では配列の一つ一つに異なる誤差を足しています.内包表記を使っていますが, つまりはfor文ですべての要素に += ranodm.uniform(0, 0.1)をするのと同じことです.<h4 id="7-操作にかかる時間を測る"><a href="#7-操作にかかる時間を測る" class="headerlink" title="7. 操作にかかる時間を測る"></a>7. 操作にかかる時間を測る</h4>操作の前に %timeitと打つと操作と同時にかかった時間を表示します.</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/18/jupyter-notebook/" data-id="ckhqy0wwt0004qotw40jm8hvl" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/18/jupyter-notebook/" data-id="ckhqy6d390004wotw1efkhu6d" class="article-share-link">共有</a>
       
       
     </footer>
@@ -348,7 +342,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/25/Approximate-integration/" data-id="ckhqy0wwl0000qotw2f4q0yyx" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/25/Approximate-integration/" data-id="ckhqy6d2z0000wotweg5e8xqu" class="article-share-link">共有</a>
       
       
     </footer>
