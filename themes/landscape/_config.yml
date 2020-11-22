@@ -12,9 +12,9 @@ fancybox: true
 # Sidebar
 sidebar: right
 widgets:
+- profile
 - category
 - tag
-- tagcloud
 - archive
 - recent_posts
 
@@ -31,7 +31,7 @@ show_count: false
 # Miscellaneous
 google_analytics: UA-167617845-1
 gauges_analytics:
-favicon: /favicon.png
+favicon: \favicon.ico
 twitter: '@KY__2001'
 google_plus:
 fb_admins:
