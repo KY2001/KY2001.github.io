@@ -20,15 +20,15 @@ ga('send', 'pageview');
   
   <title>無記憶情報源Sのn次拡大情報源をm元ハフマン符号化する | ky&#39;s memo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ハフマン符号化ハフマン符号化とは情報源を">
+  <meta name="description" content="ハフマン符号化情報源記号を符号化する際に, 平均符号長を最小にするような符号化の方法の１つをハフマン符号化という. m元ハフマン符号化のアルゴリズム 各情報源記号に対応する葉をつくる. 今ある中で確率の最も小さいm個の葉を子とする新たな葉をつくる. 葉の数がm個未満になるまで1, 2を繰り返す. m個未満の今ある全ての葉を子とする根をつくる. 根から部分木の確率の総和が小さい順に0…m-1を割り当">
 <meta property="og:type" content="article">
 <meta property="og:title" content="無記憶情報源Sのn次拡大情報源をm元ハフマン符号化する">
 <meta property="og:url" content="http://github.com/KY2001/KY2001.github.com/2021/01/08/Huffman/index.html">
 <meta property="og:site_name" content="ky&#39;s memo">
-<meta property="og:description" content="ハフマン符号化ハフマン符号化とは情報源を">
+<meta property="og:description" content="ハフマン符号化情報源記号を符号化する際に, 平均符号長を最小にするような符号化の方法の１つをハフマン符号化という. m元ハフマン符号化のアルゴリズム 各情報源記号に対応する葉をつくる. 今ある中で確率の最も小さいm個の葉を子とする新たな葉をつくる. 葉の数がm個未満になるまで1, 2を繰り返す. m個未満の今ある全ての葉を子とする根をつくる. 根から部分木の確率の総和が小さい順に0…m-1を割り当">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2021-01-07T20:28:19.000Z">
-<meta property="article:modified_time" content="2021-01-07T20:37:39.534Z">
+<meta property="article:modified_time" content="2021-01-07T20:46:28.639Z">
 <meta property="article:author" content="ky">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@KY__2001">
@@ -225,12 +225,20 @@ mjx-container[display="true"] + br {
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="ハフマン符号化"><a href="#ハフマン符号化" class="headerlink" title="ハフマン符号化"></a>ハフマン符号化</h3><p>ハフマン符号化とは情報源を</p>
+        <h3 id="ハフマン符号化"><a href="#ハフマン符号化" class="headerlink" title="ハフマン符号化"></a>ハフマン符号化</h3><p>情報源記号を符号化する際に, 平均符号長を最小にするような符号化の方法の１つをハフマン符号化という.</p>
+<h3 id="m元ハフマン符号化のアルゴリズム"><a href="#m元ハフマン符号化のアルゴリズム" class="headerlink" title="m元ハフマン符号化のアルゴリズム"></a>m元ハフマン符号化のアルゴリズム</h3><ol>
+<li>各情報源記号に対応する葉をつくる.</li>
+<li>今ある中で確率の最も小さいm個の葉を子とする新たな葉をつくる.</li>
+<li>葉の数がm個未満になるまで1, 2を繰り返す.</li>
+<li>m個未満の今ある全ての葉を子とする根をつくる.</li>
+<li>根から部分木の確率の総和が小さい順に0…m-1を割り当てる.</li>
+<li>根から情報源記号にあたる葉まで降りながら割り当てられた数を拾っていく.</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/01/08/Huffman/" data-id="ckjnbb6xg0009astw7jgn4cfo" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/01/08/Huffman/" data-id="ckjnbmjzr0006e4tw61i6c0c7" class="article-share-link">共有</a>
       
       
     </footer>
