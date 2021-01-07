@@ -109,13 +109,7 @@ deploy:
   message: hexo deploy!
 
   #latex
-mathjax:
-  tags: none # or 'ams' or 'all'
-  single_dollars: true # enable single dollar signs as in-line math delimiters
-  cjk_width: 0.9 # relative CJK char width
-  normal_width: 0.6 # relative normal (monospace) width
-  append_css: true # add CSS to pages rendered by MathJax
-  every_page: true # if true, every page will be rendered by MathJax regardless the `mathjax` setting in Front-matter
+
 
 math:
   engine: 'mathjax'
@@ -123,5 +117,14 @@ math:
     src: http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
     config:
       tex2jax:
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ]
         displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    tags: none # or 'ams' or 'all'
+    single_dollars: true # enable single dollar signs as in-line math delimiters
+    cjk_width: 0.9 # relative CJK char width
+    normal_width: 0.6 # relative normal (monospace) width
+    append_css: true # add CSS to pages rendered by MathJax
+    every_page: true # if true, every page will be rendered by MathJax regardless the `mathjax` setting in Front-matter
+  katex:
+    css: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css'
+    options:
+      throwOnError: false
