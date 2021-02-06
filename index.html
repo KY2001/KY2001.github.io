@@ -264,7 +264,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/01/08/Huffman/" data-id="ckk5o4qjw000ch4twdjje8amq" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/01/08/Huffman/" data-id="ckktoqc010003rktw0mt119e6" class="article-share-link">共有</a>
       
       
     </footer>
@@ -346,7 +346,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/12/31/FFT/" data-id="ckk5o4qjm0001h4twfbxq3ofg" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/12/31/FFT/" data-id="ckktoqbzr0000rktw2wrwcziy" class="article-share-link">共有</a>
       
       
     </footer>
@@ -401,7 +401,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/22/CF1451E/" data-id="ckk5o4qjp0003h4tw0k705f6q" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/22/CF1451E/" data-id="ckktoqbzy0001rktw4ij4bee2" class="article-share-link">共有</a>
       
       
     </footer>
@@ -449,7 +449,7 @@ mjx-container[display="true"] + br {
 <img src="/2020/05/28/jupyter-notebook/5.jpg" class="">
 <p>以上でグラフがかけます.</p>
 <h4 id="細かい設定"><a href="#細かい設定" class="headerlink" title="細かい設定"></a>細かい設定</h4><p>以下のようにできる.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span> * math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.title(<span class="string">"グラフのタイトル"</span>)                              </span><br><span class="line">plt.xlabel(<span class="string">'x軸の変数名'</span>)     </span><br><span class="line">plt.ylabel(<span class="string">"y軸の変数名"</span>)</span><br><span class="line">plt.xlim(x軸の値の下限, 上限)</span><br><span class="line">plt.ylim(y軸の値の下限, 上限)</span><br><span class="line">plt.grid(<span class="literal">True</span>)               </span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span> * math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.title(<span class="string">"グラフのタイトル"</span>)                              </span><br><span class="line">plt.xlabel(<span class="string">"x軸の変数名"</span><span class="string">")     </span></span><br><span class="line"><span class="string">plt.ylabel("</span>y軸の変数名<span class="string">")</span></span><br><span class="line"><span class="string">plt.xlim(x軸の値の下限, 上限)</span></span><br><span class="line"><span class="string">plt.ylim(y軸の値の下限, 上限)</span></span><br><span class="line"><span class="string">plt.grid(True)               </span></span><br><span class="line"><span class="string">plt.plot(x, y)</span></span><br></pre></td></tr></table></figure>
 <img src="/2020/05/28/jupyter-notebook/tmp.jpg" class="">
 
 <h4 id="plt-plot"><a href="#plt-plot" class="headerlink" title="plt.plot"></a>plt.plot</h4><p>plt.plot(x, y)でグラフが描ける.<strong>xとyは配列もしくはジェネレータ</strong>代入すると動きます.<br>よく使いそうなその他の引数をまとめます.</p>
@@ -457,7 +457,7 @@ mjx-container[display="true"] + br {
 <li>color(c)=: 線の色<br>英語の先頭のアルファベットを指定する.<strong>黒:’k’</strong>, 青:’b’, 緑:’g’, 赤:’r’, 黄色:’c’(cyan), 紫:’m’, 黄色:’y’, 白:’w’</li>
 <li>alpha=: 透過度<br>グラフの線の透過度を0?1で指定できる。1に近いほど濃くなる.</li>
 <li>label=: 線の名前(label)を表示<br>必ずplt.legend()を同時に入力する.</li>
-<li>linewidth(lw)=: 線の太さ<br>大きい値を入れるほど太くなる.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.plot(x, y, label=<span class="string">'abc'</span>)</span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure>
+<li>linewidth(lw)=: 線の太さ<br>大きい値を入れるほど太くなる.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.plot(x, y, label=<span class="string">"abc"</span>)</span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure>
 <img src="/2020/05/28/jupyter-notebook/6.jpg" class="">
 
 </li>
@@ -467,13 +467,13 @@ mjx-container[display="true"] + br {
 <li>np.arange()<br>   半開区間[L, R)についてnp.arange(L, R, 点同士の間隔)と指定する.<br>   例えばnp.arange(0, 5, 1) = [0, 1, 2, 3, 4], np.arange(0, 1, 0.5) = [0, 0.5]となる.<br>   半開区間なのでRを含まない.</li>
 <li>range()<br>   半開区間についてrange(L, R, 点同士の間隔)と指定する.<br>   一見, np.arange()と同じに見えるが, <strong>点同士の間隔にfloatを指定できない</strong>点や,<br>   <strong>配列ではなく<a target="_blank" rel="noopener" href="https://qiita.com/tomotaka_ito/items/35f3eb108f587022fa09">ジェネレータ</a>を渡す</strong>点で違いがある.<br>   取り敢えず, np.arange()を使うほうが良さそう.</li>
 </ol>
-<h4 id="グラフの保存"><a href="#グラフの保存" class="headerlink" title="グラフの保存"></a>グラフの保存</h4><p>plt.savefig(“ファイル名.png”, format=”png”, dpi=300)</p>
+<h4 id="グラフの保存"><a href="#グラフの保存" class="headerlink" title="グラフの保存"></a>グラフの保存</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.savefig(<span class="string">"ファイル名.png"</span>, <span class="built_in">format</span>=<span class="string">"png"</span>, dpi=<span class="number">300</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="操作にかかる時間を測る"><a href="#操作にかかる時間を測る" class="headerlink" title="操作にかかる時間を測る"></a>操作にかかる時間を測る</h4><p>操作の前に %timeitと打つと操作と同時にかかった時間を表示する.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/28/jupyter-notebook/" data-id="ckk5o4qjq0004h4twc4m0aw8o" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/28/jupyter-notebook/" data-id="ckktoqc06000arktwfcar6dza" class="article-share-link">共有</a>
       
       
     </footer>
@@ -599,7 +599,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/25/Approximate-integration/" data-id="ckk5o4qjh0000h4twec1wg32g" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/25/Approximate-integration/" data-id="ckktoqc050009rktwe54h74xn" class="article-share-link">共有</a>
       
       
     </footer>
