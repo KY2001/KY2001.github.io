@@ -6,7 +6,7 @@ mathjax: true
 katex: true
 ---
 ### 離散畳み込み
-関数$f$, $g$の畳み込み$f*g$は次のように定義される.
+関数$f$, $g$の畳み込み$f*g$は次のように定義される。
 
 $$
 (f*g)(t) = \int f(\tau)g(t - \tau)
@@ -18,16 +18,16 @@ $$
 (f*g)(n) = \sum_{m = 0}^{N-1} f\left[m\right]g\left[n-m\right] \ \ \  (n = 0...N-1)
 $$
 
-これを離散畳込みという. 素直に計算すると, N回積をとってN-1回その項の総和を取るので計算量は$O(N)$となる.
-また, これを0...N-1全てのnについて$(f*g)(n)$を求めると$O(N^2)$になる.
-高速フーリエ変換(FFT)を用いるとこれが$O(NlogN)$で計算できる.
+これを離散畳込みという。 素直に計算すると, N回積をとってN-1回その項の総和を取るので計算量は$O(N)$となる。
+また, これを0...N-1全てのnについて$(f*g)(n)$を求めると$O(N^2)$になる。
+高速フーリエ変換(FFT)を用いるとこれが$O(NlogN)$で計算できる。
 
 ### 離散畳み込みの応用例
 1. 多項式乗算の高速化
-n次のxに関する多項式$f$, $g$についてその積を$h = fg$とする.
-このとき$f$, $g$, $h$の$n$次の係数をそれぞれ$a_n$, $b_n$, $c_n$として次が成り立つ.
+n次のxに関する多項式$f$, $g$についてその積を$h = fg$とする。
+このとき$f$, $g$, $h$の$n$次の係数をそれぞれ$a_n$, $b_n$, $c_n$として次が成り立つ。
 $$c_n = \sum_{k = 0}^na_kb_{n - k}$$
-これは畳み込みそのものである.
+これは畳み込みそのものである。
 
 2. 相関関数の計算
 信号$x(t)$, $y(t)$に対しての相関関数$r_{xy}(\tau)$は
@@ -36,7 +36,7 @@ $$r_{xy}(\tau) = \int_\infty^\infty x(t)y(t + \tau)dt$$
 $$r_{xy}[m] = \sum_{n = 0}^{N-1}x[n]y[n+m]\ \ \  (m = 0...N-1)$$
 
 ### DFT(離散フーリエ変換)
-離散的信号$g\left[n\right]$に対して, 離散フーリエ変換$G\left[k\right]$は次の式で定義される.
+離散的信号$g\left[n\right]$に対して, 離散フーリエ変換$G\left[k\right]$は次の式で定義される。
 $$
 G\left[k\right] = \mathcal{F}[g[n]] = \sum_{n = 0}^{N-1}g\left[n\right]e^{-\frac{j2\pi nk}{N}} \ \ \  (k = 0...N-1)
 $$
@@ -47,7 +47,7 @@ $$
 
 ### FFT(高速フーリエ変換)
 高速フーリエ変換(FFT)とは離散フーリエ変換(DFT)を計算量$O(NlogN)$で計算するためのアルゴリズムである.
-FFTは回転因子$W_N$の次の２つの性質によって成り立つ.
+FFTは回転因子$W_N$の次の２つの性質によって成り立つ。
 
 $$
   ^\forall m \in \mathbb{Z}, \ W_N^k =  W_N^{k+mN} \tag{1}
@@ -57,8 +57,8 @@ $$
   W_N^k =  W_N^l W_N^{k - l} \tag{2}
 $$
 
-計算の都合上, データ数を$N = 2^m$とする.  
-また, データを偶数番目$g_0\left[n\right]$と奇数番目$g_1\left[n\right]$に分ける. すなわち
+計算の都合上, データ数を$N = 2^m$とする。
+また, データを偶数番目$g_0\left[n\right]$と奇数番目$g_1\left[n\right]$に分ける。 すなわち
 
 $$
 g_0\left[n\right] = g\left[2n\right] \ \ \ (n = 0...\frac{N}{2}-1)
@@ -86,12 +86,12 @@ G\left[k\right] &=& \sum_{n = 0}^{\frac{N}{2}-1}g_0\left[n\right]W_{\frac{N}{2}}
 \end{eqnarray}
 {% endmathjax %}
 
-以上からデータ数$N = 2^m$のDFTはデータ数$N/2$のDFTの組み合わせから再帰的に求まることがわかる.
+以上からデータ数$N = 2^m$のDFTはデータ数$\frac{N}{2}$のDFTの組み合わせから再帰的に求まることがわかる。
 
 ### シグナルフロー図
-例えば$N = 2^3 = 8$のFFTは次の図のように計算できる. これをシグナルフロー図という.
-手順としては左の$g$から順に右側の黒点を計算していけば良い.
-図からわかるようにある一点の$G[k]$を求める場合は$2 + 4 + ... + 2^m \sim 2N$より$O(N)$の計算量が掛かるが, メモ化を行うことで全ての$k$について計算する場合は$O(NlogN)$の計算量となる.
+例えば$N = 2^3 = 8$のFFTは次の図のように計算できる. これをシグナルフロー図という。
+手順としては左の$g$から順に右側の黒点を計算していけば良い。
+図からわかるようにある一点の$G[k]$を求める場合は$2 + 4 + ... + 2^m \sim 2N$より$O(N)$の計算量が掛かるが, メモ化を行うことで全ての$k$について計算する場合は$O(NlogN)$の計算量となる。
 
 <img src="/2020/12/31/FFT/fig1.png" alt="" title="8点DFT" width="350">
 
@@ -100,12 +100,12 @@ G\left[k\right] &=& \sum_{n = 0}^{\frac{N}{2}-1}g_0\left[n\right]W_{\frac{N}{2}}
 $$
 \mathcal{F}^{-1}\left[\mathcal{F}\left[g\left[n\right]\right]\right] = g\left[n\right]
 $$
-次のように定義できる.
+次のように定義できる。
 
 $$\mathcal{F}^{- 1}\left[G\left[k\right]\right] = g\left[n\right] = \frac{1}{N}\sum_{k = 0}^{N-1}G\left[k\right]W_N^{-nk} = \frac{1}{N}\overline{\sum_{k = 0}^{N-1}\overline{G\left[k\right]}W_N^{nk}}
 $$
 
-よって複素共役を取ることでFFTのアルゴリズムから計算ができる.
+よって複素共役を取ることでFFTのアルゴリズムから計算ができる。
 
 ### 畳み込み with FFT
 離散フーリエ変換の性質から
@@ -116,7 +116,7 @@ $$
 \end{eqnarray}
 {% endmathjax %}
 
-こうしてFFTから畳み込みが計算できる.
+こうしてFFTから畳み込みが計算できる。
 
 [証明]
 上の式の両辺の$\mathcal{F}$をとると
@@ -129,7 +129,7 @@ $$
 \Leftrightarrow \mathcal{F}\left[\sum_{m = 0}^{N} f\left[m\right]g\left[n-m\right]\right] = \mathcal{F}\left[f\left[m\right]\right]*\mathcal{F}\left[g\left[n-m\right]\right]
 $$
 
-左辺(left) = 右辺(right)を示す.
+左辺(left) = 右辺(right)を示す。
 
 {% mathjax %}
 \begin{eqnarray}
