@@ -27,12 +27,12 @@ ga('send', 'pageview');
 <meta property="og:site_name" content="ky&#39;s memo">
 <meta property="og:description" content="完全メモ, 非厳密, 無益です。 カーネル・シェル・ターミナル・コンソールとは歴史的に厳密にはニュアンスの違い等があるらしいが, 現代ではカーネルを除いて殆ど同じ意味で使われているし, 違いを明確に知る必要もないらしい。また, OS文化圏によっても定義のされ方が異なるらしいし, ネットで調べてもきちんと理解できないので諦めました。ということで全部cmd.exeみたいなやつだと思っています。 カーネ">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="c:/Users/yukiy/OneDrive/desktop/KY2001.github.io/public/2021/05/03/shell-script/1.png">
+<meta property="og:image" content="http://github.com/2021/05/03/shell-script/1.png">
 <meta property="article:published_time" content="2021-05-03T07:52:01.000Z">
-<meta property="article:modified_time" content="2021-05-03T13:10:15.528Z">
+<meta property="article:modified_time" content="2021-05-03T13:12:32.645Z">
 <meta property="article:author" content="ky">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/yukiy/OneDrive/desktop/KY2001.github.io/public/2021/05/03/shell-script/1.png">
+<meta name="twitter:image" content="http://github.com/2021/05/03/shell-script/1.png">
   
     <link rel="alternate" href="/atom.xml" title="ky&#39;s memo" type="application/atom+xml">
   
@@ -255,7 +255,7 @@ mjx-container[display="true"] + br {
 </ol>
 <p>以上を用いて作成したコード</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$score = 0</span><br><span class="line">g++ A.cpp -o B -W -std=c++17</span><br><span class="line">$tests = Get-ChildItem ".\TestCase\*"</span><br><span class="line">$num = 0</span><br><span class="line">foreach ($test in $tests){</span><br><span class="line">    $score += cat $test | .\B.exe</span><br><span class="line">    $num += 1</span><br><span class="line">}</span><br><span class="line">echo ($score/$num)</span><br></pre></td></tr></table></figure>
-<p>これを適当な名前.ps1(Powershellのスクリプトの拡張子)というテキストファイルに突っ込んで, ソースと同じディレクトリに配置, テストケースを.txtで.\TestCaseに配置して実行するとできます！<br>実は↑のコードはAHC002(<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/ahc002/tasks/ahc002_a)%E7%94%A8%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%9F%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C">https://atcoder.jp/contests/ahc002/tasks/ahc002_a)用に書いたのですが</a>, うまくいきました！別のコンテストでも簡単にできそうです。<br><img src="C:\Users\yukiy\OneDrive\desktop\KY2001.github.io\public\2021\05\03\shell-script\1.png"></p>
+<p>これを適当な名前.ps1(Powershellのスクリプトの拡張子)というテキストファイルに突っ込んで, ソースと同じディレクトリに配置, テストケースを.txtで.\TestCaseに配置して実行するとできます！<br>実は↑のコードはAHC002(<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/ahc002/tasks/ahc002_a)%E7%94%A8%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%9F%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C">https://atcoder.jp/contests/ahc002/tasks/ahc002_a)用に書いたのですが</a>, うまくいきました！別のコンテストでも簡単にできそうです。<br><img src="/2021/05/03/shell-script/1.png"></p>
 <h3 id="今後の課題"><a href="#今後の課題" class="headerlink" title="今後の課題"></a>今後の課題</h3><ol>
 <li>採点用のコードがrust等で配布された場合にそのコンパイル・実行もやる</li>
 <li>ヒューリスティックコンテストでは制限時間指定をするため(2s等), シングルコア？でやるとかなり時間がかかる。マルチスレッド対応？させると良さそう。</li>
@@ -264,7 +264,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/05/03/shell-script/" data-id="cko8mf2yg0005kstwgsmsal2c" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/05/03/shell-script/" data-id="cko8mhq7a0005mgtw3odbgo74" class="article-share-link">共有</a>
       
       
     </footer>
