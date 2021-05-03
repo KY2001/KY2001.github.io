@@ -229,7 +229,7 @@ mjx-container[display="true"] + br {
 <h5 id="ターミナル"><a href="#ターミナル" class="headerlink" title="ターミナル"></a>ターミナル</h5><p>ユーザがコンピュータへ入出力する際に使うハードウェア。例えば入力: キーボード, 出力: ディスプレイ。現代ではハードウェアとしてのターミナルは使われず, ターミナルをソフトとして実装したターミナルエミュレータ・仮想ターミナルの意味で使われる事が多い。</p>
 <h5 id="コンソール"><a href="#コンソール" class="headerlink" title="コンソール"></a>コンソール</h5><p>よく分かりません。</p>
 <h3 id="シェルスクリプトとは"><a href="#シェルスクリプトとは" class="headerlink" title="シェルスクリプトとは"></a>シェルスクリプトとは</h3><p>シェルを操作するためのスクリプト言語。シェルでの操作を組み合わせて自動化できる。<br>以下, Windows PowerShellを用いる。<br>現状Windowsしか使わないので, これが良さそう。<br>スクリプトに関するドキュメント: (<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/powershell/scripting/samples/sample-scripts-for-administration?view=powershell-7.1">https://docs.microsoft.com/ja-jp/powershell/scripting/samples/sample-scripts-for-administration?view=powershell-7.1</a>)</p>
-<h3 id="やりたいこと"><a href="#やりたいこと" class="headerlink" title="やりたいこと"></a>やりたいこと</h3><p>例えば, “Heuristic系のプログラミングコンテストで複数のテストをC++に実行させて, 出た解を採点, 点数の総和 or 平均をとる”ようなことをやりたい。<br>今回はこれを目標にする。手順は次のとおりである。</p>
+<h3 id="やりたいこと"><a href="#やりたいこと" class="headerlink" title="やりたいこと"></a>やりたいこと</h3><p>特定言語での操作はある程度できるようになったので, 異なるプログラミング言語同士を連携させたい。<br>例えば, “Heuristic系のプログラミングコンテストで複数のテストをC++に実行させて, 出た解を採点, 点数の総和 or 平均をとる”ようなことをやりたい。<br>今回はこれを目標にする。手順は次のとおりである。</p>
 <ol>
 <li>C++のソースをコンパイルする</li>
 <li>実行させる</li>
@@ -254,13 +254,13 @@ mjx-container[display="true"] + br {
 <p>これを適当な名前.ps1(Powershellのスクリプトの拡張子)というテキストファイルに突っ込んで, ソースと同じディレクトリに配置, テストケースを.txtで.\TestCaseに配置して実行するとできます！<br>実は↑のコードはAHC002(<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/ahc002/tasks/ahc002_a)%E7%94%A8%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%9F%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C">https://atcoder.jp/contests/ahc002/tasks/ahc002_a)用に書いたのですが</a>, うまくいきました！別のコンテストでも簡単にできそうです。<br><img src="/2021/05/03/shell-script/1.png"></p>
 <h3 id="今後の課題"><a href="#今後の課題" class="headerlink" title="今後の課題"></a>今後の課題</h3><ol>
 <li>採点用のコードがrust等で配布された場合にそのコンパイル・実行もやる</li>
-<li>ヒューリスティックコンテストでは制限時間指定をするため(2s等), シングルコア？でやるとかなり時間がかかる。マルチスレッド対応？させると良さそう。</li>
+<li>ヒューリスティックコンテストでは制限時間指定をするため(2s等), シングルスレッド？でやるとかなり時間がかかる。マルチスレッド対応？させると良さそう。</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/05/03/shell-script/" data-id="cko8mhq7a0005mgtw3odbgo74" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/05/03/shell-script/" data-id="cko8mn5vt0005mstw60lcco6t" class="article-share-link">共有</a>
       
       
     </footer>
@@ -318,7 +318,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/04/04/%E6%8E%A8%E5%AE%9A%E3%81%A8%E6%A4%9C%E5%AE%9A/" data-id="cko8mhq7i000imgtwcqno2d8m" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/04/04/%E6%8E%A8%E5%AE%9A%E3%81%A8%E6%A4%9C%E5%AE%9A/" data-id="cko8mn5w0000fmstw09hr2qgu" class="article-share-link">共有</a>
       
       
     </footer>
@@ -361,7 +361,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/03/30/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B7%E3%82%A2%E3%83%B3%E3%81%AE%E6%A5%B5%E5%BA%A7%E6%A8%99%E8%A1%A8%E7%A4%BA/" data-id="cko8mhq7c0007mgtweskoah64" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/03/30/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B7%E3%82%A2%E3%83%B3%E3%81%AE%E6%A5%B5%E5%BA%A7%E6%A8%99%E8%A1%A8%E7%A4%BA/" data-id="cko8mn5w1000gmstwcnfb4rpc" class="article-share-link">共有</a>
       
       
     </footer>
@@ -425,7 +425,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/03/20/%E6%95%B4%E6%95%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%83%A1%E3%83%A2/" data-id="cko8mhq7j000jmgtw9igy6zhx" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/03/20/%E6%95%B4%E6%95%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%83%A1%E3%83%A2/" data-id="cko8mn5w2000hmstwd2gib4g0" class="article-share-link">共有</a>
       
       
     </footer>
@@ -493,7 +493,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/03/06/AtCoder-BLUE/" data-id="cko8mhq6y0000mgtwaefd6x1q" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2021/03/06/AtCoder-BLUE/" data-id="cko8mn5va0000mstw2p755jh4" class="article-share-link">共有</a>
       
       
     </footer>
@@ -575,7 +575,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/12/31/FFT/" data-id="cko8mhq780003mgtw8goy7sgk" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/12/31/FFT/" data-id="cko8mn5vr0003mstwbcvo151b" class="article-share-link">共有</a>
       
       
     </footer>
@@ -630,7 +630,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/22/CF1451E/" data-id="cko8mhq730001mgtw17t5bhmm" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/11/22/CF1451E/" data-id="cko8mn5vh0001mstw378cact1" class="article-share-link">共有</a>
       
       
     </footer>
@@ -704,7 +704,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/28/jupyter-notebook/" data-id="cko8mhq790004mgtwhcn006jz" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/28/jupyter-notebook/" data-id="cko8mn5vs0004mstwg8xo96y4" class="article-share-link">共有</a>
       
       
     </footer>
