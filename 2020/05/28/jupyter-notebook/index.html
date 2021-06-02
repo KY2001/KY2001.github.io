@@ -20,19 +20,19 @@ ga('send', 'pageview');
   
   <title>Pythonでグラフを描く | ky&#39;s memo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="以下Jupyter Notebookでやる。 グラフを描く各種ライブラリをインポートする。 123456%matplotlib inlineimport matplotlib.pyplot as pltimport numpy as npimport scipyimport pandas as pdimport math 二次関数 123x &#x3D; np.linspace(0, 10, 1000)y">
+  <meta name="description" content="グラフを描く各種ライブラリをインポートする。 123456import matplotlib.pyplot as pltimport numpy as npimport scipyimport pandas as pdimport mathimport japanize_matplotlib 二次関数 123x &#x3D; np.linspace(0, 10, 1000)y &#x3D; x ** 2plt.plo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pythonでグラフを描く">
 <meta property="og:url" content="http://github.com/KY2001/KY2001.github.com/2020/05/28/jupyter-notebook/index.html">
 <meta property="og:site_name" content="ky&#39;s memo">
-<meta property="og:description" content="以下Jupyter Notebookでやる。 グラフを描く各種ライブラリをインポートする。 123456%matplotlib inlineimport matplotlib.pyplot as pltimport numpy as npimport scipyimport pandas as pdimport math 二次関数 123x &#x3D; np.linspace(0, 10, 1000)y">
+<meta property="og:description" content="グラフを描く各種ライブラリをインポートする。 123456import matplotlib.pyplot as pltimport numpy as npimport scipyimport pandas as pdimport mathimport japanize_matplotlib 二次関数 123x &#x3D; np.linspace(0, 10, 1000)y &#x3D; x ** 2plt.plo">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="http://github.com/2020/05/28/jupyter-notebook/4.jpg">
 <meta property="og:image" content="http://github.com/2020/05/28/jupyter-notebook/5.jpg">
 <meta property="og:image" content="http://github.com/2020/05/28/jupyter-notebook/tmp.jpg">
 <meta property="og:image" content="http://github.com/2020/05/28/jupyter-notebook/6.jpg">
 <meta property="article:published_time" content="2020-05-28T03:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-04T09:26:57.071Z">
+<meta property="article:modified_time" content="2021-06-02T07:01:59.712Z">
 <meta property="article:author" content="ky">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://github.com/2020/05/28/jupyter-notebook/4.jpg">
@@ -229,9 +229,8 @@ mjx-container[display="true"] + br {
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>以下Jupyter Notebookでやる。</p>
-<h2 id="グラフを描く"><a href="#グラフを描く" class="headerlink" title="グラフを描く"></a>グラフを描く</h2><p>各種ライブラリをインポートする。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> math</span><br></pre></td></tr></table></figure>
+        <h2 id="グラフを描く"><a href="#グラフを描く" class="headerlink" title="グラフを描く"></a>グラフを描く</h2><p>各種ライブラリをインポートする。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> japanize_matplotlib</span><br></pre></td></tr></table></figure>
 <h4 id="二次関数-y-x-2"><a href="#二次関数-y-x-2" class="headerlink" title="二次関数 $y = x^2$"></a>二次関数 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex" xmlns="http://www.w3.org/2000/svg" width="6.333ex" height="2.351ex" role="img" focusable="false" viewBox="0 -833.9 2799.1 1038.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(767.8, 0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="msup" transform="translate(1823.6, 0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mn" transform="translate(572, 363) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">1000</span>)</span><br><span class="line">y = x ** <span class="number">2</span></span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
 <p>出力:</p>
 <img src="/2020/05/28/jupyter-notebook/4.jpg" class="">
@@ -241,7 +240,7 @@ mjx-container[display="true"] + br {
 <img src="/2020/05/28/jupyter-notebook/5.jpg" class="">
 <p>以上でグラフがかける。</p>
 <h4 id="細かい設定"><a href="#細かい設定" class="headerlink" title="細かい設定"></a>細かい設定</h4><p>以下のようにできる。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span> * math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.title(<span class="string">"グラフのタイトル"</span>)                              </span><br><span class="line">plt.xlabel(<span class="string">"x軸の変数名"</span>)     </span><br><span class="line">plt.ylabel(<span class="string">"y軸の変数名"</span>)</span><br><span class="line">plt.xlim(x軸の値の下限, 上限)</span><br><span class="line">plt.ylim(y軸の値の下限, 上限)</span><br><span class="line">plt.grid(<span class="literal">True</span>)               </span><br><span class="line">plt.plot(x, y)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span> * math.pi, <span class="number">1000</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.title(<span class="string">"グラフのタイトル"</span>)                              </span><br><span class="line">plt.xlabel(<span class="string">"x軸の変数名"</span>)     </span><br><span class="line">plt.ylabel(<span class="string">"y軸の変数名"</span>)</span><br><span class="line">plt.xlim(x軸の値の下限, 上限)</span><br><span class="line">plt.ylim(y軸の値の下限, 上限)</span><br><span class="line">plt.grid(<span class="literal">True</span>)               </span><br><span class="line">plt.plot(x, y)</span><br><span class="line">plt.figure(dpi=<span class="number">300</span>)</span><br></pre></td></tr></table></figure>
 <img src="/2020/05/28/jupyter-notebook/tmp.jpg" class="">
 
 <h4 id="plt-plot"><a href="#plt-plot" class="headerlink" title="plt.plot"></a>plt.plot</h4><p>plt.plot(x, y)でグラフが描ける。<strong>xとyは配列もしくはジェネレータ</strong>代入すると動く。<br>よく使いそうなその他の引数をまとめる。</p>
@@ -267,7 +266,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/28/jupyter-notebook/" data-id="cko8mn5vs0004mstwg8xo96y4" class="article-share-link">共有</a>
+      <a data-url="http://github.com/KY2001/KY2001.github.com/2020/05/28/jupyter-notebook/" data-id="ckpf4k71r00046suyhshk4kr2" class="article-share-link">共有</a>
       
       
     </footer>
@@ -299,7 +298,7 @@ mjx-container[display="true"] + br {
   <div class="widget-wrap">
     <h3 class="widget-title">カテゴリ</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E3%83%A1%E3%83%A2/">メモ</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%B6%E6%8A%80%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">競技プログラミング</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E3%83%A1%E3%83%A2/">メモ</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%B6%E6%8A%80%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">競技プログラミング</a></li></ul>
     </div>
   </div>
 
